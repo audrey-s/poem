@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<!--1 给html指定语言属性-->
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <!--2 指定视口信息-->
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <!--3 指定跨IE浏览器兼容性-->
+    <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+    <!--4 引入bootstrap.css主文件-->
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/animate.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <!--5 引入两个兼容性js文件-->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <title>小诗站</title>
+    <style>
+    </style>
+</head>
+<body>
+<!--第一部分：导航-->
+<nav class="navbar navbar-default navbar-fixed-top" id="top-nav">
+    <div class="container">
+        <!--1 navbar-header-->
+        <div class="navbar-header">
+            <!--1.navbar-brand-->
+            <a href="index.html" class="navbar-brand"><img src="Images/poem.jpg" alt=""/></a>
+            <!--2.响应式按钮navbar-toggle-->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#d1">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <!--2 响应式内容navbar-collapse collapse-->
+        <div  class="navbar-collapse collapse">
+            <!--1.导航链接  靠右-->
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a target="_self" href="index.html">
+                    <span class="glyphicon glyphicon-home"></span>
+                    首页
+                    </a>
+                </li>
+                <li><a href="usercenter.html">
+                    <span class="glyphicon glyphicon-user"></span>
+                    用户中心</a></li>
+                <li><a href="register.html">
+                    <span class="glyphicon glyphicon-heart"></span>
+                    注册</a></li>
+                <li><a href="login.html">
+                    <span class="glyphicon glyphicon-log-in"></span>
+                    登录</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--第二部分：详细网页内容-->
+<div class="container" id="content">
+    <!--第一行-->
+    <div class="row">
+        <!--2-1：左侧：热门文章；中：热门新闻；右侧：最新发表-->
+        <!--左侧：热门图文文章 380w-->
+        <div class="col-md-4 hidden-xs">
+            <!--轮播照片-->
+            <div id="myCar" class="carousel slide" data-ride="carousel" data-interval="8000">
+                <!--轮播内容区域-->
+                <div class="carousel-inner">
+                    <!--1、轮播图片1-->
+                    <div class="item active">
+                        <img src="Images/left_1.jpg">
+                        <div class="carousel-caption">
+                            <h4></h4>
+                            <p></p>
+                        </div>
+                    </div>
+                    <!--2、轮播图片2-->
+                    <div class="item">
+                        <img src="Images/left_2.jpg">
+                        <div class="carousel-caption">
+                            <h4></h4>
+                            <p></p>
+                        </div>
+                    </div>
+                    <!--3、轮播图片3-->
+                    <div class="item">
+                        <img src="Images/left_1.jpg">
+                        <div class="carousel-caption">
+                            <h4></h4>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <!--导航小圆点-->
+                <ul class="carousel-indicators">
+                    <li data-target="#myCar" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCar" data-slide-to="1"></li>
+                    <li data-target="#myCar" data-slide-to="2"></li>
+                </ul>
+            </div>
+        </div>
+        <!--中：热门新闻 380w-->
+        <div class="col-sm-6 col-md-4">
+            <div class="hot-content">
+                <h4><a href="#" style="color:#B5000C"><b>&nbsp;&nbsp;叶匡政：当代语文教育扼杀了汉字文化</b></a></h4>
+                <ul>
+                    <li><a href="#">揭发者斯诺登的伟大时刻</a></li>
+                    <li><a href="#">大学校长的声望从何而来？</a></li>
+                </ul>
+                <h4><a href="#" style="color:#B5000C"><b>&nbsp;&nbsp;考古与公众有多远之</b></a></h4>
+                <ul>
+                    <li><a href="#">留住一个必然消失的世界</a></li>
+                    <li><a href="#">有多少意外可以重来？</a></li>
+                </ul>
+                <ul style="border-bottom: none">
+                    <li><a href="#">钱多就是专业投资者吗？</a></li>
+                    <li><a href="#">租房而住的罗永浩答年轻网友问</a></li>
+                    <li><a href="#">这个时代是如何赚钱的？</a></li>
+                    <li><a href="#">房贷利率上调会伤及刚需，你怎么看？</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--右侧：最新发表 280w-->
+        <div class="col-sm-6 col-md-4">
+            <div class="newest">
+                <div>最新发表</div>
+                <ul>
+                    <!--<li><a href="#">琵笆仙 咏平遥古城</a>-->
+                        <!--<span class="rt signature"><a href="#">张三</a></span>-->
+                    <!--</li>-->
+                </ul>
+                <div>圈子</div>
+                <ul class="newest-circle lf">
+                    <li><a href="#">
+                        <img src="http://1812.img.pp.sohu.com.cn/images/2013/1/23/9/10/e34296036_13d28ee2264g85.jpg" alt=""/>
+                        <br/>文秀网
+                    </a></li>
+                    <li><a href="#">
+                        <img src="http://1882.img.pp.sohu.com.cn/images/2013/3/13/15/18/c5a6e17a1f1d459o_13e267b8bd9g85.jpg" alt=""/>
+                        <br/>读者
+                    </a></li>
+                    <li><a href="#">
+                        <img src="http://i1.itc.cn/20130117/2d7b_f04afa8c_9b89_a780_9dea_b10af311f877_1.jpg" alt=""/>
+                        <br/>意林
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--第二行：动画特效的圆形图片-->
+    <div class="row">
+        <div class="col-md-12 hidden-xs hidden-sm thumb-img">
+            <ul class="lf">
+                <li><a href="#"><figure>
+                        <div class="overlay"></div><img src="Images/t_1.jpg" class="img-responsive">
+                </figure></a></li>
+                <li><a href="#"><figure>
+                        <div class="overlay"></div><img src="Images/t_1.jpg" class="img-responsive">
+                </figure></a></li>
+                <li><a href="#"><figure>
+                        <div class="overlay"></div><img src="Images/t_1.jpg" class="img-responsive">
+                </figure></a></li>
+                <li><a href="#"><figure>
+                        <div class="overlay"></div><img src="Images/t_1.jpg" class="img-responsive">
+                </figure></a></li><li><a href="#"><figure>
+                        <div class="overlay"></div><img src="Images/t_1.jpg" class="img-responsive">
+                </figure></a></li><li><a href="#"><figure>
+                        <div class="overlay"></div><img src="Images/t_1.jpg" class="img-responsive">
+                </figure></a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!--第三行：诗集内容模块-->
+    <!--抬头-->
+    <div class="row" id="lt-title">
+        <div class="col-xs-12"><span class="glyphicon glyphicon-hand-right"></span> 诗集</div>
+    </div>
+    <div class="row" id="poem-part">
+        <!--具体内容部分：左侧-中策-右侧-->
+        <!--左侧 图片文章-->
+        <div class="col-md-4 hidden-xs hidden-sm lt-tt clear">
+            <!--图文部分-->
+                <dl>
+                    <dt><img src="Images/7.jpg" class="img-responsive"/></dt>
+                    <dd><b>菲律宾货船与美军驱逐舰相撞责任在谁</b></dd>
+                </dl>
+            <!--排行-->
+            <div class="lt-le">
+                <ul class="lt-dd lf">
+                    <li class="active"><a href="tt-switch">博文排行</a></li>
+                    <li><a href="dd-switch">热度排行</a></li>
+                </ul>
+                    <!--排行内容-->
+                <div class="tt-switch">
+                    <ul class="clear">
+                        <!--<li>热门博客排行</li>-->
+                    </ul>
+                </div>
+                    <!--热度内容-->
+                <div class="dd-switch">
+                    <ul>
+                     <!--<li>热度排行</li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--中侧 热门诗文-->
+        <div class="col-md-4 col-sm-6 ss-hot clear">
+            <div class="ss-mid">
+                <h3><a href="#">怀念遥远的的冰天雪地</a></h3>
+                <p>一夜之间，从悬崖上流下来的小溪，停止了她潺潺湲湲的吟唱，变成了一悬崖凝固的诗。</p>
+            </div>
+            <div class="ss-fill">
+                <div>诗词墨苑
+                    <a href="#" class="rt">更多&gt;&gt;&nbsp;</a>
+                </div>
+                <ul>
+                    <li><a href="#">忆父八首</a></li>
+                    <li><a href="#">关于诗和远方的无题</a></li>
+                    <li><a href="#">点绛唇·立夏</a></li>
+                    <li><a href="#">2015第一首：颂词</a></li>
+                    <li><a href="#">水镜波平一叶舟</a></li>
+                    <li><a href="#">艰难旅程</a></li>
+                </ul>
+            </div>
+            <div class="ss-fed">
+                <div>散文随笔
+                    <a href="#" class="rt">更多&gt;&gt;&nbsp;</a>
+                </div>
+                <ul>
+                    <li><a href="#">夏天就在这里等你</a></li>
+                    <li><a href="#">等待，一朵花开</a></li>
+                    <li><a href="#">意境与境界</a></li>
+                    <li><a href="#">一夜入夏</a></li>
+                    <li><a href="#">相爱，是孤独的</a></li>
+                    <li><a href="#">胡同里的光阴与故事</a></li>
+                </ul>
+            </div>
+            <div class="ss-seven">
+                <div>小说时代
+                    <a href="#" class="rt">更多&gt;&gt;&nbsp;</a>
+                </div>
+                <ul>
+                    <li><a href="#">《西夏的苍狼》番外篇</a></li>
+                    <li><a href="#">苏轼殿试作文杜撰蒙考官</a></li>
+                    <li><a href="#">解密中国造酒轴心论</a></li>
+                    <li><a href="#">连载小说：镜月花</a></li>
+                    <li><a href="#">捕食的哲学</a></li>
+                    <li><a href="#">桑椹熟了</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--右侧 诗词名家-->
+        <div class="col-md-4 col-sm-6 hidden-xs clear">
+            <div class="rt-bg">
+                <div>诗词大家
+                    <a href="#" class="rt">更多&gt;&gt;&nbsp;</a>
+                </div>
+                <ul class="lf">
+                    <li><a href="#">
+                        <img src="http://1842.img.pp.sohu.com.cn/images/2012/3/26/11/25/u115891379_1370ddfcf11g213.jpg" class="img-responsive" alt=""/>
+                        李治亚
+                    </a></li>
+                    <li><a href="#">
+                        <img src="http://1804.img.pp.sohu.com.cn/images/2012/11/30/17/1/e36413187_13c146b607cg85.jpg" class="img-responsive"  alt=""/>
+                        胡曼荻
+                    </a></li>
+                    <li><a href="#">
+                        <img src="http://1852.img.pp.sohu.com.cn/images/2013/5/23/13/18/413597b80e3a4das_13f98aaa947g86.jpg" class="img-responsive"  alt=""/>
+                        风之子
+                    </a></li>
+                    <li><a href="#">
+                        <img src="http://sucimg.itc.cn/avatarimg/77256132_1379921607539_c175" class="img-responsive" alt=""/>
+                        陶东风
+                    </a></li>
+                    <li><a href="#">
+                        <img src="http://1812.img.pp.sohu.com.cn/images/2013/8/21/0/27/0aa90f2184db46es_14166c65b6fg85.jpg" class="img-responsive" alt=""/>
+                        李子迟
+                    </a></li> <li><a href="http://sucimg.itc.cn/avatarimg/45344035_1373529602608_c175">
+                        <img src="Images/mj_6.jpg" class="img-responsive" alt=""/>
+                        独木舟
+                    </a></li>
+                </ul>
+            </div>
+            <div class="rt-mj">
+                <div>名家
+                    <a href="#" class="rt">更多&gt;&gt;&nbsp;</a>
+                </div>
+                <ul>
+                    <li><a href="#">琵笆仙 咏平遥古城</a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="#">浣溪沙：忆江南</a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="#">小园梅</a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="#">2015第一首：颂词</a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="#">艰难旅程</a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="#">艰难旅程</a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!--文化 行-->
+
+    <div class="row" id="cul-title">
+        <div class="col-xs-12"><span class="glyphicon glyphicon-hand-right"></span> 文化</div>
+    </div>
+    <div class="row" id="cul-part">
+        <!--具体内容部分：左侧-中策-右侧-->
+        <!--左侧 图片文章-->
+        <div class="col-md-4  hidden-xs hidden-sm clear lt-tt">
+            <!--图文部分-->
+            <dl>
+                <dt><img src="Images/6.jpg" class="img-responsive"/></dt>
+                <dd><b>母爱铸就的圣贤——雪漠解读《孟子传》</b></dd>
+            </dl>
+            <!--名家内容-->
+            <div class="rt-mj">
+                <div>名家
+                    <a href="#" class="rt">更多&gt;&gt;&nbsp;</a>
+                </div>
+                <ul>
+                    <li><a href="#">揭发者斯诺登的伟大时刻</a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="#">当代语文教育扼杀了汉字文化</a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="#">如何分辨是启蒙还是洗脑</a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="#">大学校长的声望从何而来</a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="#">考古与公众有多远之</a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="#">艰难旅程</a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--中侧 热门文学作品-->
+        <div class="col-md-4 col-sm-6 ss-hot clear">
+            <div class="ss-mid">
+                <h3><a href="#">三国男神赵云被谁打败抑郁而死</a></h3>
+                <p>真实赵云的人生结局，被演义里的饭桶将军打败抑郁而死 在赵云辉煌的一生中有一个挺没有面子的结局</p>
+            </div>
+            <div class="ss-fill">
+                <div>文化
+                    <a href="#" class="rt">更多&gt;&gt;&nbsp;</a>
+                </div>
+                <ul>
+                    <li><a href="#">周仓能进关帝庙只因做对一件事</a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="#">猪八戒做哪件事让人感动得热泪盈眶？</a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="#">中国版的《深夜食堂》很中国也很不中</a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="#">广场舞矛盾：“输出不够”是关键</a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="#">刘欣中华文明能延续千年可从多个维度解释</a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="ss-fed">
+                <div>史话
+                    <a href="#" class="rt">更多&gt;&gt;&nbsp;</a>
+                </div>
+                <ul>
+                    <li><a href="#">周作人究竟是怎么死的？</a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="#">蒋介石庐山抗战讲话激动人心</a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="#">孙权玩转江东的秘密武器</a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="#">“清议亡而干戈至矣。”</a>
+                        <span  class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="#">东方出版社吴王夫差和伍子胥情同父子</a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--右侧 文化名家-->
+        <div class="col-md-4 col-sm-6 hidden-xs clear">
+            <div class="rt-bg">
+                <div>诗文墨大家
+                    <a href="#" class="rt">更多&gt;&gt;&nbsp;</a>
+                </div>
+                <ul class="lf">
+                    <li><a href="#">
+                        <img src="http://i0.itc.cn/20140901/3355_f437998e_d4d8_d78f_d3d7_2df68fe3268a_1.jpg" class="img-responsive" alt=""/>
+                        叶永烈
+                    </a></li>
+                    <li><a href="#">
+                        <img src="http://i1.itc.cn/20140901/3355_78af2d03_82c6_2876_cd7f_2fbfa4ef331e_1.jpg" class="img-responsive"  alt=""/>
+                        肖鹰
+                    </a></li>
+                    <li><a href="#">
+                        <img src="http://1803.img.pp.sohu.com.cn/images/2011/9/4/17/13/u62326252_132f0389186g213.jpg" class="img-responsive"  alt=""/>
+                        蒋方舟
+                    </a></li>
+                    <li><a href="#">
+                        <img src="http://1852.img.pp.sohu.com.cn/images/blog/2009/2/25/21/19/12057c3dedcg213.jpg" class="img-responsive" alt=""/>
+                        洪烛
+                    </a></li>
+                    <li><a href="#">
+                        <img src="http://1812.img.pp.sohu.com.cn/images/2013/1/10/18/28/u88488893_13ce7df9573g2.jpg" class="img-responsive" alt=""/>
+                        大智若
+                    </a></li> <li><a href="#">
+                    <img src="http://sucimg.itc.cn/avatarimg/60209811_1378266790479_c175" class="img-responsive" alt=""/>
+                    黄秋华
+                </a></li>
+                </ul>
+            </div>
+            <!--热度内容-->
+            <div class="lt-le">
+                <ul class="lt-dd lf">
+                    <li><a href="#">博文排行</a></li>
+                </ul>
+                <div class="tt-switch">
+                <ul>
+                    <li>
+                        <div><i class="bill-1">1</i></div>
+                        <div><a href="#">《西夏的苍狼》番外篇（上）</a>
+                            <span class="rt signature"><a href="#"></a></span>
+                        </div>
+
+                    </li>
+                    <li>
+                        <div><i class="bill-2">2</i></div>
+                        <div><a href="#">
+                            中国“健康酒体”的源头就是汾酒
+                        </a>
+                            <span class="rt signature"><a href="#"></a></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div><i class="bill-2">3</i></div>
+                        <div><a href="#">
+                            陶短房：从英国“铁桶领主”说起
+                        </a>
+                            <span class="rt signature"><a href="#"></a></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div><i class="bill-item">4</i></div>
+                        <div><a href="#">
+                            花房阁子第三季（三十五）满天星
+                        </a>
+                            <span class="rt signature"><a href="#"></a></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div><i class="bill-item">5</i></div>
+                        <div><a href="#">
+                            共享经济，实质上是共享个人信息</a>
+                            <span class="rt signature"><a href="#"></a></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--旅游板块-->
+    <div class="row" id="trav-title">
+        <div class="col-xs-12"><span class="glyphicon glyphicon-hand-right"></span> 旅游</div>
+    </div>
+    <div class="row" id="trav-part">
+        <!--具体内容部分：左侧-中策-右侧-->
+        <!--左侧 图片文章-->
+        <div class="col-md-4 hidden-xs hidden-sm clear lt-tt">
+            <!--图文部分-->
+            <dl>
+                <dt><img src="Images/4.jpg" class="img-responsive"/></dt>
+                <dd><b>游来游去，何处是家</b></dd>
+            </dl>
+            <!--名家内容-->
+            <div class="rt-mj">
+                <div>牛人在路上
+                    <a href="#" class="rt">更多&gt;&gt;&nbsp;</a>
+                </div>
+                <ul>
+                    <li><a href="#">揭发者斯诺登的伟大时刻</a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="#">当代语文教育扼杀了汉字文化</a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="#">如何分辨是启蒙还是洗脑</a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="#">大学校长的声望从何而来</a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="#">考古与公众有多远之</a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="#">艰难旅程</a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--中侧 热门旅游-->
+        <div class="col-md-4 col-sm-6 clear ss-hot">
+            <div class="ss-mid">
+                <h3><a href="#">银装素裹的乌兰布统</a></h3>
+                <p>冬季的乌兰布统银装素裹、分外妖娆，那荒芜空旷之美，恰似一幅幅灵动而优雅的水墨画。缓缓的丘陵变幻着柔和的曲线，天空湛蓝白云流淌，光照下的皑皑白雪，在光影变换之中千其变化。</p>
+            </div>
+            <div class="ss-fill">
+                <div>大玩家
+                    <a href="#" class="rt">更多&gt;&gt;&nbsp;</a>
+                </div>
+                <ul>
+                    <li><a href="http://yyrd46265.blog.sohu.com/324814562.html">
+                        传统时尚并举的彝家女绣娘
+                        </a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="http://yangbo513.blog.sohu.com/324812440.html">
+                        清风弄竹影江西吉安白鹭洲书院
+                    </a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="http://ltz20080808.blog.sohu.com/324811473.html">
+                        三人行中南第一奇峡坐龙峡，用生命在攀援
+                    </a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="http://maolvdui666.blog.sohu.com/324811327.html">
+                        毛驴队【斋月中的孟加拉国】。火车站众生相
+                    </a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="http://zjdwfq.blog.sohu.com/324809108.html">
+                        黛瓦粉墙台湾：游走士林官邸的偏安之美
+                    </a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="http://maolvdui666.blog.sohu.com/324808636.html">
+                        毛驴队【斋月中的孟加拉国】。火车的故事
+                    </a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="http://gingcong.blog.sohu.com/324801338.html">浪迹天涯从空中俯瞰荷兰也很美</a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="http://ydc007.blog.sohu.com/324801303.html">
+                        仁义礼智信埃及特色特色纸莎画,世界奇迹金字塔
+                    </a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="http://ydc007.blog.sohu.com/324801064.html"> 仁义礼智信埃及特色纸莎画,世界奇迹金字塔</a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="http://ydc007.blog.sohu.com/324801029.html">
+                        仁义礼智信埃及特色纸莎画,世界奇迹金字塔
+                    </a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="http://yangbo513.blog.sohu.com/324797320.html">江西吉安——钓源村之二：<a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                    <li><a href="http://yyrd46265.blog.sohu.com/324797186.html">荷语感言</a>
+                        <span class="rt signature"><a href="#"></a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--右侧 旅游-->
+        <div class="col-md-4 col-sm-6  hidden-xs clear">
+            <div class="rt-bg">
+                <div>旅游达人
+                    <a href="#" class="rt">更多&gt;&gt;&nbsp;</a>
+                </div>
+                <ul class="lf">
+                    <li><a href="http://zzzrbj.blog.sohu.com/">
+                        <img src="http://i3.itc.cn/20141008/3355_7682267a_9652_7afe_50d1_7561bdf4678d_1.jpg" class="img-responsive" alt=""/>
+                        幸福死了
+                    </a></li>
+                    <li><a href="http://yjnqh.blog.sohu.com/">
+                        <img src="http://sucimg.itc.cn/avatarimg/s_170504355_1405048694720_c175" class="img-responsive"  alt=""/>
+                        雨浓
+                    </a></li>
+                    <li><a href="http://xbwjiali.blog.sohu.com/">
+                        <img src="http://sucimg.itc.cn/avatarimg/s_29858569_1420816741415_c175" class="img-responsive"  alt=""/>
+                        力力猫
+                    </a></li>
+                </ul>
+            </div>
+            <!--热度内容-->
+            <div class="lt-le">
+                <ul class="lt-dd lf">
+                    <li><a href="#">博文排行</a></li>
+                    <li><a href="#">热度排行</a></li>
+                </ul>
+                <div class="tt-switch">
+                    <ul>
+                        <li>
+                            <div><i class="bill-1">1</i></div>
+                            <div><a href="#">美国行：纽约街头见闻</a>
+                                <span class="rt signature"><a href="#"></a></span>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div><i class="bill-2">2</i></div>
+                            <div><a href="#">大英博物馆的文创产品是如何开…</a>
+                                <span class="rt signature"><a href="#"></a></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div><i class="bill-2">3</i></div>
+                            <div><a href="#">江西吉安——钓源村之二：</a>
+                                <span class="rt signature"><a href="#"></a></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div><i class="bill-item">4</i></div>
+                            <div><a href="#">失水带来的旅游安全问题</a>
+                                <span class="rt signature"><a href="#"></a></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div><i class="bill-item">5</i></div>
+                            <div><a href="#">埃及特色特色纸莎画,世界奇迹…</a>
+                                <span class="rt signature"><a href="#"></a></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="dd-switch">
+                    <ul>
+                        <li>
+                            <div><i class="bill-1">1</i></div>
+                            <div><a href="#">美国行：纽约街头见闻</a>
+                                <span class="rt signature"><a href="#"></a></span>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div><i class="bill-2">2</i></div>
+                            <div><a href="#">大英博物馆的文创产品是如何开…</a>
+                                <span class="rt signature"><a href="#"></a></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div><i class="bill-2">3</i></div>
+                            <div><a href="#">江西吉安——钓源村之二：</a>
+                                <span class="rt signature"><a href="#"></a></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div><i class="bill-item">4</i></div>
+                            <div><a href="#">失水带来的旅游安全问题</a>
+                                <span class="rt signature"><a href="#"></a></span>
+                            </div>
+                        </li>
+                        <li>
+                            <div><i class="bill-item">5</i></div>
+                            <div><a href="#">埃及特色特色纸莎画,世界奇迹…</a>
+                                <span class="rt signature"><a href="#"></a></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+<!--底部-->
+<footer>
+    <div class="links"><a href="#">关于我们</a>|<a href="#">联系我们</a>|<a href="#">人才招聘</a>|<a href="#">商家入驻</a>|<a href="#">广告服务</a>|<a href="#">友情链接</a></div>
+    <div class="copyright">北京市公安局朝阳分局备案编号110105014669  |  京ICP证070359号  |  Copyright © 2004-2017 版权所有
+    </div>
+</footer>
+
+
+    <!--6 引入两个js插件文件-->
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/detail.js"></script>
+    <!--7 引入检查文件-->
+    <script src="js/bootlint.js"></script>
+    <script>
+        //bootlint.showLintReportForCurrentDocument([]);
+    </script>
+</body>
+</html>
+

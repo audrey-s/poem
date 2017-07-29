@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--1 给html指定语言属性-->
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <!--2 指定视口信息-->
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <!--3 指定跨IE浏览器兼容性-->
+    <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+    <!--4 引入bootstrap.css主文件-->
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <!--5 引入两个兼容性js文件-->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <title>小诗站</title>
+    <style>
+        pre{
+            background-color: #fff;
+            border-color:transparent;
+        }
+    </style>
+</head>
+<body>
+<!--第一部分：导航-->
+<nav id="userTop">
+    <div class="container">
+        <h3 class="lf"><a href="index.html"><img src="Images/poem.jpg" alt=""/></a></h3>
+    </div>
+</nav>
+
+<!--详情内容-->
+<div class="container detail-content">
+    <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="usercenter.html">用户中心</a></li>
+        <li class="active">详情</li>
+    </ol>
+
+    <div class="panel panel-default">
+        <div  class="panel-heading">
+            <h1 class="panel-title">青春纪念册</h1>
+        </div>
+        <div class="panel-body">
+            <pre></pre>
+        </div>
+        <div class="panel-footer">
+            <div class="text-left">
+                <a href="#">评论(<span>242</span>)</a>|<a href="#">阅读(<span>54</span>)</a>|<span>2016-7-2</span>
+            </div>
+        </div>
+    </div>
+<!--填写评论区域-->
+    <ul class="list-group">
+        <li class="list-group-item">
+            <div class="media">
+                <div class="media-left media-middle">
+                    <img class="media-object" src="Images/4.jpg" width="80">
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading"></h4>
+                    <textarea cols="60" rows="2" placeholder="此处评论区域" id="new-comment"></textarea>
+                    <button class="btn btn-success" type="button" style="vertical-align:bottom" id="btn-content">评论</button>
+                </div>
+            </div>
+
+        </li>
+    </ul>
+
+    <!--已评论的结果 展览-->
+    <ul class="list-group has-content">
+    </ul>
+</div>
+
+
+<!--底部-->
+<footer>
+    <div class="links"><a href="#">关于我们</a>|<a href="#">联系我们</a>|<a href="#">人才招聘</a>|<a href="#">商家入驻</a>|<a href="#">广告服务</a>|<a href="#">友情链接</a></div>
+    <div class="copyright">北京市公安局朝阳分局备案编号110105014669  |  京ICP证070359号  |  Copyright © 2004-2017 版权所有
+    </div>
+</footer>
+
+
+<!--6 引入两个js插件文件-->
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/detail.js"></script>
+<!--7 引入检查文件-->
+<script src="js/bootlint.js"></script>
+<script>
+    //bootlint.showLintReportForCurrentDocument([]);
+</script>
+</body>
+</html>
+

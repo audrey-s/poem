@@ -1,0 +1,413 @@
+body {
+    font-family: KaiTi_GB2312,Arial,sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 1.7;
+    color: #000;
+    background-color: #FBFAF8;
+    padding-top: 50px;
+}
+.lf{float:left;}
+.rt{float:right;}
+footer{
+    text-align: center;
+    margin: 20px auto;
+    width: 100%;
+}
+a:hover, a:active, a:focus {
+    color: #000;
+    outline: none;
+    text-decoration: none;
+}
+.signature{
+    width: 50px;
+    font-size: 12px;
+    font-weight: normal;
+    color: #888;
+    text-align: right;
+    overflow: hidden;
+}
+.clear{
+    display: table;
+    content: " ";
+}
+
+/*****************************index.html样式*****************************/
+/*****************************导航*****************************/
+#top-nav{
+    border-top:3px solid #FF8500;
+    box-shadow:10px 5px 5px #888888;
+}
+
+
+/*****************************第一行*****************************/
+#content{
+    margin-top: 20px;
+    overflow: hidden;
+    /*width: 80%;*/
+}
+#myCar{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow:hidden;
+}
+#myCar img{
+    width: 100%;
+    height: 300px;
+}
+.hot-content{
+    border:1px solid #ddd;
+    width: 100%;
+    height: 300px;
+    background-color: #F8F8F8;
+    overflow: hidden;
+}
+.newest{
+    border:1px solid #ddd;
+    width: 100%;
+    height: 300px;
+    background-color: #F8F8F8;
+    overflow: hidden;
+    padding: 0 10px;
+}
+.hot-content ul{
+    border-bottom:1px dotted #ddd;
+}
+.newest>div,#poem-part>div.col-xs-12,.ss-fill>div,.ss-fed>div,.ss-seven>div,.rt-bg>div,.rt-mj>div{
+    border-bottom:1px solid #ddd;
+    box-shadow:0 2px 1px #888;
+    padding-left: 10px;
+    color:#B5000C;
+    font-weight: bold;
+    margin-bottom: 5px;
+    clear: both;
+}
+.newest .newest-circle img {
+    /*width: 60px;*/
+    height: 60px;
+}
+.newest .newest-circle li a{
+    float: left;
+}
+.newest .newest-circle li{
+    float:left;
+    width:33%;
+    list-style: none;
+    margin-top: 8px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+/*****************************第二行*****************************/
+.thumb-img{
+    margin-top: 20px;
+    padding-left: 40px;
+}
+.thumb-img li{
+    float:left ;
+    list-style: none;
+    width: 180px;
+}
+.thumb-img figure {
+    height: 60px;
+    overflow: hidden;
+    z-index: 12;
+    position: relative;
+}
+.thumb-img>.overlay{
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    transition: 0.7s;
+}
+.thumb-img img {
+    z-index: 8;
+    opacity: 1;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+.thumb-img a:hover,.thumb-img a:focus{
+    bottom: 7px;
+    text-decoration: none;
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.thumb-img a:hover img,.thumb-img a:focus img{
+    transform: scale(1.2);
+}
+.thumb-img a:hover .overlay,.thumb-img a:focus .overlay{
+    opacity: 1;
+    visibility: visible;
+}
+
+/*****************************第三行*****************************/
+#lt-title,#cul-title,#trav-title{
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 5px;
+    color:#b1000b;
+    border:1px solid #ddd;
+    box-shadow: 5px 2px 5px #ddd;
+    margin-top: 10px;
+}
+#poem-part,#cul-part,#trav-part{
+    border:1px solid #ddd;
+    height: 450px;
+    overflow: hidden;
+}
+.lt-tt{
+    width: 33%;
+}
+.lt-tt>dl,#usermain dl{
+    width:80%;
+    height:250px;
+    text-align: center;
+    margin: 10px 40px;
+}
+.lt-tt>dl dt,#usermain dl dt{
+    border:1px solid #ddd;
+    padding: 3px;
+}
+.lt-le{
+    /*border:1px solid #ddd;*/
+    margin-left: 3%;
+    padding:0;
+}
+.lt-dd{
+    width: 100%;
+    box-shadow: 0 5px 5px #888;
+}
+.lt-dd li{
+    float: left;
+    overflow: hidden;
+    width: 100px;
+    border: 1px solid #ddd;
+    margin-right: 5px;
+    text-align: center;
+    list-style: none;
+    margin-top: 2px;
+}
+.lt-dd li.active,.lt-dd li:hover{
+    background-color: #ddd;
+    color:#b1000b;
+    font-weight: bold;
+    border-bottom: 1px solid #fff;
+    box-shadow: 5px 10px 5px #fff;
+}
+ .lt-dd li:hover a{
+    color:#b1000b;
+    font-weight: bold;
+}
+.bill-1,.bill-2,.bill-item{
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    background: url(../images/icon_home.gif)2px -22px no-repeat;
+    margin-top: 2px;
+    display: inline-block;
+    font-style: normal;
+    margin-right: 5px;
+}
+.bill-2{
+    background: url(../images/icon_home.gif)2px -50px no-repeat;
+}
+.bill-item{
+    background: url(../images/icon_home.gif)2px -79px no-repeat;
+}
+.tt-switch>ul,.dd-switch>ul{
+    list-style: none;
+}
+.tt-switch>ul li,.dd-switch>ul li{
+    float: left;
+    width: 90%;
+    line-height: 2;
+}
+.tt-switch ul li>div:first-child,.dd-switch ul li>div:first-child{
+    float:left;
+}
+ .dd-switch{
+    display: none;
+}
+.ss-mid{
+    text-align: center;
+}
+ .ss-hot{
+    border: 1px solid #ddd;
+    border-bottom: none;
+    padding: 0 10px;
+    height: 470px;
+    overflow: hidden;
+}
+.ss-fill>ul,.ss-fed>ul,.ss-seven>ul{
+    padding-left: 20px;
+}
+.ss-fill>ul li,.ss-fed>ul li,.ss-seven>ul li{
+    float: left;
+    width: 50%;
+}
+#cul-part .ss-fill>ul li,#cul-part .ss-fed>ul li,#trav-part .ss-fill>ul li{
+    width: 100%;
+}
+.rt-bg>ul>li{
+    padding-top: 5px;
+    list-style: none;
+    width: 33%;
+    float: left;
+    overflow: hidden;
+    text-align: center;
+}
+.rt-bg>ul>li a{
+    float:left;
+}
+.rt-bg>ul>li img{
+    /*width: 80px;*/
+    height: 70px;
+}
+.rt-mj,.rt-bg{
+    padding-left: 10px;
+}
+
+
+
+
+
+/***************login.html样式**register.html样式****************************/
+
+.main {
+    position: relative;
+    background-color: rgba(0,0,0, .8);
+}
+.box {
+    width: 600px;
+    height: 400px;
+    background: rgba(255,255,255, .7);
+    border-radius: 5px;
+    margin: 50px auto;
+    padding-top: 80px;
+}
+
+.vali_info{/* 页面初始，验证消息不显示 */
+    display:none;
+}
+.txt_focus{/*当文本框获得焦点时穿上*/
+    border-top:2px solid black;
+    border-left:2px solid black;
+}/*当文本框失去焦点时脱下*/
+
+.vali_success,.vali_fail{
+    background-repeat:no-repeat;
+    background-position:left center;
+    display:block;
+}
+/* 验证消息：验证通过时的样式 */
+.vali_success{
+    background-image:url("../Images/ok.png");
+    padding-left:20px;
+    width:0px;height:20px;
+    overflow:hidden;
+}
+/* 验证消息：验证失败时的样式 */
+.vali_fail{
+    background-image:url("../Images/err.png");
+    border:1px solid red;
+    background-color:#ddd;
+    color:Red;
+    padding-left:30px;
+}
+
+
+
+#regTop,#loginTop,#userTop{
+    margin-top: -60px;
+    height:56px;
+    line-height: 70px;
+    background-color: #fff;
+    border-bottom: 1px solid #CCCCCC;
+    box-shadow: 10px 10px 5px #888888;
+}
+#userTop{
+    box-shadow: none;
+}
+#regTop img,#loginTop img,#userTop img{
+    vertical-align: bottom;
+}
+#regTop>p{
+    margin-right: 10px;
+}
+#regTop a, #loginTop a{
+    color:#777;
+    font-weight: bold;
+    margin-left: 10px;
+}
+#registerContent{
+    height:500px;
+    padding:40px 10px;
+}
+#registerContent>div:first-child{
+    border-right: 1px solid #CCCCCC;
+}
+#reg-phone{
+    border:1px solid #D1EEFF;
+    background-color: #F5FBFF;
+    width: 25%;
+    margin-left: 70px;
+}
+#reg-phone>h4{
+    padding: 10px 20px;
+    border-bottom: 1px solid #CCCCCC;
+}
+.reg-text{
+    font-size: 12px;
+}
+.reg-danger{
+    color:#F18300;
+    font-weight: bold;
+}
+
+
+
+/***************************usercenter.html样式*/
+
+#usermainRight{
+    height: 630px;
+    overflow: auto;
+}
+.panel-heading{
+  padding: 1px 10px;
+}
+.panel-footer{
+    text-align: center;
+}
+.breadcrumb{
+    padding-left: 0;
+    margin-bottom: 10px;
+}
+#usermain div.row{
+    border:1px solid #ddd;
+    width: 100%;
+    margin-left: 1px;
+}
+#usermainRight .panel-body ul{
+    padding-left: 0;
+    list-style: none;
+}
+#usermainRight .item-info{
+    border-bottom: 1px solid #ddd;
+    padding-left: 5px;
+}
+
+
+.list-group .media-object{
+    /*width: 30%;*/
+}
